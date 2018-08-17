@@ -7,7 +7,7 @@ const getYoutubeID = require('get-youtube-id');
 const fetchVideoInfo = require('youtube-info');
 
 const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
-const prefix = 'K';
+const prefix = '4';
 client.on('ready', function() {
     console.log(`i am ready ${client.user.username}`);
 });
@@ -225,7 +225,6 @@ function search_video(query, cb) {
 function isYoutube(str) {
     return str.toLowerCase().indexOf('youtube.com') > -1;
 }
-
 client.on('message', message => {
      if (message.content === prefix +"help") {
     const embed = new Discord.RichEmbed()
@@ -246,10 +245,9 @@ client.on('message', message => {
 	 **${prefix}vol**
 	 مستوى الصوت 1-100
         
-	 PREFIX = ${prefix}
-	 PING = ${Date.now() - message.createdTimestamp}ms
-	 FOR HELP = <@254338104238800896>
-	By : KOKA $$ `)
+	 Prefix = ${prefix}
+	 Ping = ${Date.now() - message.createdTimestamp}ms
+	 For help = <@337457211875917834> `)
 
       message.channel.send({embed});
 	 }
@@ -257,7 +255,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-var prefix = "K";
+var prefix = "4";
  
   if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
