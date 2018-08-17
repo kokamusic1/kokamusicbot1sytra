@@ -7,7 +7,7 @@ const getYoutubeID = require('get-youtube-id');
 const fetchVideoInfo = require('youtube-info');
 
 const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
-const prefix = '$';
+const prefix = 'K';
 client.on('ready', function() {
     client.user.setGame(`ء KOKA-$`,"http://twitch.tv/sytra_ayman")
     console.log(`i am ready ${client.user.username}`);
@@ -249,8 +249,7 @@ client.on('message', message => {
         
 	 PREFIX = ${prefix}
 	 PING = ${Date.now() - message.createdTimestamp}ms
-	 FOR HELP = <@337457211875917834>
-	By : ! OsTaaZz SyTrAAءء $ `)
+	 FOR HELP = <@254338104238800896> `)
 
       message.channel.send({embed});
 	 }
@@ -258,25 +257,25 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-var prefix = "$";
+var prefix = "K";
  
   if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
   var argresult = args.join(' ');
   if (message.author.id == '395462979115679755' ) return;
  
-if (message.content.startsWith(prefix + 'stream')) {
+if (message.content.startsWith(prefix + 'setstream')) {
   client.user.setGame(argresult, "https://www.twitch.tv/sytra_ayman");
     message.channel.sendMessage(`**${argresult}** :تم تغيير الحالة الى ستريمنج`)
 } else
  
-if (message.content.startsWith(prefix + 'name')) {
+if (message.content.startsWith(prefix + 'setname')) {
   client.user.setUsername(argresult).then
       message.channel.sendMessage(`**${argresult}** : تم تغير الأسم`)
   return message.reply("**لا تستطيع تغير الأسم الا بعد ساعتين**");
 } else
 
-if (message.content.startsWith(prefix + 'img')) {
+if (message.content.startsWith(prefix + 'setimg')) {
   client.user.setAvatar(argresult);
     message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
 }
