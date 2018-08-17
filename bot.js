@@ -16,8 +16,6 @@ const ytdl = require('ytdl-core');
 
 const fs = require('fs');
 
-const gif = require("gif-search");
-
 const client = new Discord.Client({disableEveryone: true});
 
 const prefix = "!";
@@ -308,8 +306,6 @@ client.on('message', message => {
     if (message.content === 'general_commands') {
         let helpEmbed = new Discord.RichEmbed()
         .setTitle('**أوامر عامة...**')
-        .addField('avatar', "افاتار الشخص المطلوب")
-        .addField('gif', 'البحث عن جيف انت تطلبه')
         .addField('ping', 'معرفة ping البوت')
         .setFooter('KOKA $$$')
       message.channel.send(helpEmbed);
